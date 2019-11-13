@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveTest: MonoBehaviour
+public class MoveTest : MonoBehaviour
+
 {
+    public float moveSpeed = 5f;
 
-    public Vector2 speed = new Vector2(0, 0);
-
-    private Vector2 movement = new Vector2(1, 1);
 
     // Use this for initialization
     void Start()
@@ -17,28 +16,18 @@ public class MoveTest: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
+        Jump();
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+        transform.position += movement * Time.deltaTime * moveSpeed;
 
-        movement = new Vector2(
-            speed.x * inputX,
-            speed.y * inputY);
-
-        if (Input.GetKeyDown("space")) //and player on the ground then jump
-        {
-            //transform.Translate(Vector3.up * 260 * Time.deltaTime, Space.World);
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 4000));
-            print(Time.time);
-            yield return new WaitForSeconds(5);
-            print(Time.time);
-        }
 
     }
-    void FixedUpdate()
+    void Jump()
     {
-        // 5 - Move the game object
-        GetComponent<Rigidbody2D>().velocity = movement;
-        //rigidbody2D.AddForce(movement);
+        if (Input.GetButtonDown("Jump"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 25f), ForceMode2D.Impulse);
+        }
 
     }
 }

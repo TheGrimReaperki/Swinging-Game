@@ -284,7 +284,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 1552914607}
   - component: {fileID: 1552914606}
   - component: {fileID: 1552914608}
+  - component: {fileID: 1552914609}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1089,6 +1090,19 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1552914609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552914604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf3fb641a250be4c8728597078348bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &1669586280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,6 +1116,7 @@ GameObject:
   - component: {fileID: 1669586283}
   - component: {fileID: 1669586284}
   - component: {fileID: 1669586285}
+  - component: {fileID: 1669586286}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1165,7 +1180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669586280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.77, y: 0.94, z: -0.040415816}
+  m_LocalPosition: {x: -1.77, y: 1.17, z: -0.040415816}
   m_LocalScale: {x: 0.21993007, y: 0.21993007, z: 0.21993007}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1230,7 +1245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d89e3698ba3294299aa8c69f7a8b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: 0}
+  moveSpeed: 5
+--- !u!114 &1669586286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669586280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23f1384ca060cb4a9eb9d17b12ee4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1830734527
 GameObject:
   m_ObjectHideFlags: 0
