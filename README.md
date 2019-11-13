@@ -9,3 +9,4 @@ delay (https://docs.unity3d.com/ScriptReference/WaitForSeconds.html)
 
 Code:
 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200));
+change
