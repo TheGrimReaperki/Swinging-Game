@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class ScreenScroll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Move the object upward in world space 1 unit/second.
+        transform.Translate(Vector3.left * Time.deltaTime, Space.World);
     }
 }
