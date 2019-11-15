@@ -1,41 +1,44 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Movement : MonoBehaviour
 {
 
-    public Vector2 speed = new Vector2(0, 0);
+    bool isGrounded = true;
 
-    private Vector2 movement = new Vector2(1, 1);
+    private float jumpForce = 2f;
+    private Rigidbody2D pRigidBody;
 
-    // Use this for initialization
     void Start()
     {
-
+        pRigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
-
-        movement = new Vector2(
-            speed.x * inputX,
-            speed.y * inputY);
-
-        if (Input.GetKeyDown("space")) //and check if on around
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //transform.Translate(Vector3.up * 260 * Time.deltaTime, Space.World);
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 4000));
+            //Debug.Log("test");
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1000));
+            //pRigidBody.AddForce(new Vector3(0, jumpForce, 0));
         }
-
     }
-    void FixedUpdate()
-    {
-        // 5 - Move the game object
-        GetComponent<Rigidbody2D>().velocity = movement;
-        //rigidbody2D.AddForce(movement);
 
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Entered");
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("Exited");
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
 }
