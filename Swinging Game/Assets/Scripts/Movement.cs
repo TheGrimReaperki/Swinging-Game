@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 
     bool isGrounded = true;
 
-    private float jumpForce = 2f;
+    //private float jumpForce = 2f;
     private Rigidbody2D pRigidBody;
 
     void Start()
@@ -18,13 +18,13 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //Debug.Log("test");
+            //Debug.Log("can jump");
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1000));
             //pRigidBody.AddForce(new Vector3(0, jumpForce, 0));
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Entered");
         if (collision.gameObject.CompareTag("Ground"))
@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("Exited");
         if (collision.gameObject.CompareTag("Ground"))
