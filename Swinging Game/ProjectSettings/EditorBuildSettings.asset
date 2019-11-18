@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 18d9de555a0a259489512a3fbb916b0e
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 5a1a70053b488554f8cda50c814253a8
+  - enabled: 1
+    path: Assets/Scenes/PrisonRunner.unity
+    guid: 054b04cf3c66c26458fa38363c1e71e8
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 9a86dd0df1e20ff4ab4d2792927454a2
   m_configObjects: {}
