@@ -440,8 +440,13 @@ GameObject:
   - component: {fileID: 1385737576}
   - component: {fileID: 1385737575}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: Spawner
   m_TagString: Untagged
+=======
+  m_Name: Tilemap
+  m_TagString: Ground
+>>>>>>> 3c6fc54c058ae4e38f88f2a113099222625cd3c5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
