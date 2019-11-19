@@ -460,7 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 3319782768959725492, guid: 1dbee7b7152ca894ca44d973080c0638,
     type: 3}
-  startTimeBtwSpawn: 10
+  startTimeBtwSpawn: 5
   decreaseTime: 0.05
   minTime: 0.65
 --- !u!4 &1385737576
@@ -714,6 +714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863283930372038824, guid: d68b2ef3e93537f46b4b802ff74ee914,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3863283930372038870, guid: d68b2ef3e93537f46b4b802ff74ee914,
         type: 3}
@@ -3001,6 +3006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863283930129871547, guid: d68b2ef3e93537f46b4b802ff74ee914,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68b2ef3e93537f46b4b802ff74ee914, type: 3}
