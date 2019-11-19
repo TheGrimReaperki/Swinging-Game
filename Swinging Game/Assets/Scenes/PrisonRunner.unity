@@ -440,13 +440,8 @@ GameObject:
   - component: {fileID: 1385737576}
   - component: {fileID: 1385737575}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Spawner
-  m_TagString: Untagged
-=======
   m_Name: Tilemap
   m_TagString: Ground
->>>>>>> 3c6fc54c058ae4e38f88f2a113099222625cd3c5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 3319782768959725492, guid: 1dbee7b7152ca894ca44d973080c0638,
     type: 3}
-  startTimeBtwSpawn: 0.5
+  startTimeBtwSpawn: 10
   decreaseTime: 0.05
   minTime: 0.65
 --- !u!4 &1385737576
