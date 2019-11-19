@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             //Debug.Log("can jump");
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1000));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1200));
             //pRigidBody.AddForce(new Vector3(0, jumpForce, 0));
         }
     }

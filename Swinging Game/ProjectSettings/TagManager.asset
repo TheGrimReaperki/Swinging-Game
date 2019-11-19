@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
+  - 
   - 
   - 
   - 
@@ -41,16 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Fire
-    uniqueID: 3445330047
-    locked: 0
-  - name: Ground
-    uniqueID: 3052910925
-    locked: 0
-  - name: Background
-    uniqueID: 23254919
-    locked: 0
-  - name: Character
-    uniqueID: 3500994647
     locked: 0
