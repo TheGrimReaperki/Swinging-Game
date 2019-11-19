@@ -14,6 +14,8 @@ check if on floor (https://answers.unity.com/questions/196381/how-do-i-check-if-
 delay (https://docs.unity3d.com/ScriptReference/WaitForSeconds.html)
 fire collisoin (https://docs.unity3d.com/ScriptReference/Collision-gameObject.html)
 
+make the barrels destroy whew they hit the fire
+
 Code:
 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200));
 change+
