@@ -55,7 +55,7 @@ public class MenuButtons : MonoBehaviour {
     {
         Debug.Log("Help button pressed.");
         // VV Add code here to define what happens... VV
-
+        SceneManager.LoadScene(0);
         // ^^   ^^
     }
 

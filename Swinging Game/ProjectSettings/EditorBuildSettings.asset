@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrisonRunner.unity
     guid: 054b04cf3c66c26458fa38363c1e71e8
+  - enabled: 1
+    path: Assets/Scenes/Gui2.0.unity
+    guid: 2a1a6096f9a8f094899752e692d59701
   m_configObjects: {}
